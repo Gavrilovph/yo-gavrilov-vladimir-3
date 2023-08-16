@@ -1,9 +1,9 @@
 {
-  "name": "dl-academy-markup-template",
+  "name": "Portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "Markup template",
-  "author": "DirectLine Development",
+  "description": "Home project",
+  "author": "Vladimir Gavrilov",
   "main": "gulpfile.js",
   "scripts": {
     "build": "gulp build",
