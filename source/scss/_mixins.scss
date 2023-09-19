@@ -20,3 +20,36 @@
     display: table;
   }
 }
+@mixin title {
+  font-family: "Gilroy";
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: black;
+}
+
+@mixin text {
+  font-family: "Gilroy";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: black;
+    margin: 0;
+}
+
+@mixin btn {
+    background-color: transparent;
+    border: 3px solid #000;
+    border-radius: 30px;
+    color: #000;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+    padding: 10px 19px 7px;
+    text-decoration: none;
+}

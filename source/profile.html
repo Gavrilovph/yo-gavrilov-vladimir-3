@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Portfolio</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <script>
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+    </script>
+
+    <!-- Favicon -->
+
+    <!-- build:css -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <!-- endbuild -->
+  </head>
+  <body>
+    @@include('./blocks/header.html')
+    <section class="profile container">
+      <h1 class="profile__title">My profile</h1>
+      <div class="profile__info">
+        <img class="profile__image" src="img/no-image.jpg" alt="User Image">
+        <div class="profile__data">
+          <ul class="profile__list">
+            <li class="profile__list-item">
+              <p class="profile__field">Name:</p>
+              <p class="profile__content">Vladimir</p>
+            </li>
+            <li class="profile__list-item">
+              <p class="profile__field">Surname:</p>
+              <p class="profile__content">Gavrilov</p>
+            </li>
+            <li class="profile__list-item">
+              <p class="profile__field">Email:</p>
+              <p class="profile__content">v@gavrilov-dev.ru</p>
+            </li>
+            <li class="profile__list-item">
+              <p class="profile__field">Password:</p>
+              <p class="profile__content">••••••••••</p>
+            </li>
+            <li class="profile__list-item">
+              <p class="profile__field">Location:</p>
+              <p class="profile__content">Togliatti</p>
+            </li>
+            <li class="profile__list-item">
+              <p class="profile__field">Age:</p>
+              <p class="profile__content">33</p>
+            </li>
+          </ul>
+          <button class="profile__btn" onclick="openModal('changePasswordModal')">Change Password</button>
+          <button class="profile__btn" onclick="openModal('changeDataModal')">Change Other Data</button>
+          <button class="profile__btn" onclick="openModal('deleteAccountModal')">Delete Account</button>
+        </div>
+      </div>
+    </section>
+
+
+  <!-- Change Password Modal -->
+    <div class="modal">
+      <form class="modal__content" action="">
+        <div class="modal__wrapper">
+          <label class="modal__label" for="oldPassword">Old password *</label>
+          <input class="modal__input" type="text" id="oldPassword">
+        </div>
+        <div class="modal__wrapper">
+          <label class="modal__label" for="newPassword">New password *</label>
+          <input class="modal__input" type="text" id="newPassword">
+        </div>
+        <div class="modal__wrapper">
+          <label class="modal__label" for="repeatNewPassword">Repeat new password *</label>
+          <input class="modal__input" type="text" id="repeatNewPassword">
+        </div>
+        <button class="modal__btn" type="button">Change password</button>
+      </form>
+    </div>
+
+
+  <!-- <div id="changePasswordModal" class="modal">
+      <div class="modal-content">
+          <h3>Change Password</h3>
+          <input type="password" placeholder="New Password">
+          <input type="password" placeholder="Confirm Password">
+          <button onclick="closeModal('changePasswordModal')">Save</button>
+      </div>
+  </div> -->
+
+  <!-- Change Data Modal -->
+  <!-- <div id="changeDataModal" class="modal">
+      <div class="modal-content">
+          <h3>Change Other Data</h3>
+          <input type="text" placeholder="Name">
+          <input type="text" placeholder="Surname">
+          <input type="email" placeholder="Email">
+          <input type="text" placeholder="Location">
+          <input type="text" placeholder="Age">
+          <button onclick="closeModal('changeDataModal')">Save</button>
+      </div>
+  </div> -->
+
+  <!-- Delete Account Modal -->
+  <!-- <div id="deleteAccountModal" class="modal">
+      <div class="modal-content">
+          <h3>Are you sure you want to delete your account?</h3>
+          <button onclick="closeModal('deleteAccountModal')">No</button>
+          <button>Delete</button>
+      </div>
+  </div> -->
+    <script src="js/app.js" defer></script>
+  </body>
+</html>

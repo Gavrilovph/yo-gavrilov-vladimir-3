@@ -22,6 +22,117 @@
     <!-- endbuild -->
   </head>
   <body>
+    @@include('./blocks/header.html')
+    <main class="banner container">
+      <div class="banner__head">
+        <h1 class="banner__title">Vladimir Gavrilov</h1>
+        <p class="banner__text">Future front-end developer
+          33 years old, Tolyatti</p>
+      </div>
+      <div class="banner__slider">
+        <img class="banner__img" src="./img/main-photo.jpg" alt="picture of the portfolio's owner" >
+        <div class="banner__pagination">
+          <button class="banner__pagination-btn banner__pagination-btn-left"></button>
+          <ul class="banner__pagination-list">
+            <li class="banner__pagination-list-item banner__pagination-list-item-active"></li>
+            <li class="banner__pagination-list-item"></li>
+            <li class="banner__pagination-list-item"></li>
+            <li class="banner__pagination-list-item"></li>
+          </ul>
+          <button class="banner__pagination-btn banner__pagination-btn-right"></button>
+        </div>
+      </div>
+    </main>
+    <section class="about">
+      <h2 class="about__title">About me</h2>
+      <div class="about__wrapper container">
+        <div class="about__articles">
+          <div class="about__articles-one"> <!--Divs for bg image-->
+            <p class="about__articles-text">Aliquam tortor molestie turpis est tristique. Congue diam orci amet quis semper ut. Vitae aenean nibh facilisis urna, ultricies euismod nunc. Commodo fringilla sit hendrerit consequat. Vel ac elit vel sagittis.</p>
+          </div>
+          <div class="about__articles-two">
+            <p class="about__articles-text">Tincidunt id quis pellentesque rutrum pretium. Egestas aliquam dictum ipsum nisl, sed pulvinar. Commodo elit sed a fermentum non justo. Etiam platea consectetur.</p>
+          </div>
+          <div class="about__articles-three">
+            <p class="about__articles-text">Quam ipsum odio tellus etiam aliquam dolor ut hendrerit. Felis risus nec vitae nunc ultricies placerat. Nullam nec felis eu id dolor pellentesque tristique. </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="skills container">
+      <h2 class="skills__title">Skills</h2>
+      <p class="skills__text">I work in such programs as</p>
+      <div class="skills__wrapper">
+        <div class="skills__box">
+          <img class="skills__img1" src="./img/html-icon.svg" alt="skills icon">
+          <p class="skills__box-text">HTML 5</p>
+          <div class="skills__box-percentage">
+            <p class="skills__box-percentageAmount">85%</p>
+            <div class="skills__box-graph">
+              <div class="skills__box-line1 skills__box-html"></div> <!--Lines for JS current resolution animation-->
+              <div class="skills__box-line2"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skills__box">
+          <img class="skills__img2" src="./img/css-icon.svg" alt="skills icon">
+          <p class="skills__box-text">CSS/SCSS</p>
+          <div class="skills__box-percentage">
+            <p class="skills__box-percentageAmount">55%</p>
+            <div class="skills__box-graph">
+              <div class="skills__box-line1 skills__box-css"></div> <!--Lines for JS current resolution animation-->
+              <div class="skills__box-line2"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skills__box">
+          <img class="skills__img3" src="./img/js-icon.svg" alt="skills icon">
+          <p class="skills__box-text">JavaScript</p>
+          <div class="skills__box-percentage">
+            <p class="skills__box-percentageAmount">5%</p>
+            <div class="skills__box-graph">
+              <div class="skills__box-line1 skills__box-js"></div> <!--Lines for JS current resolution animation-->
+              <div class="skills__box-line2"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skills__box">
+          <img class="skills__img4" src="./img/git-icon.svg" alt="skills icon">
+          <p class="skills__box-text">Git/GitHub</p>
+          <div class="skills__box-percentage">
+            <p class="skills__box-percentageAmount">15%</p>
+            <div class="skills__box-graph">
+              <div class="skills__box-line1 skills__box-git"></div> <!--Lines for JS current resolution animation-->
+              <div class="skills__box-line2"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skills__box">
+          <img class="skills__img5" src="./img/figma-icon.svg" alt="skills icon">
+          <p class="skills__box-text">Figma</p>
+          <div class="skills__box-percentage">
+            <p class="skills__box-percentageAmount">80%</p>
+            <div class="skills__box-graph">
+              <div class="skills__box-line1 skills__box-figma"></div> <!--Lines for JS current resolution animation-->
+              <div class="skills__box-line2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="portfolio">
+      <h2 class="portfolio__title">Portfolio</h2>
+      <div class="portfolio__wrapper container">
+        <img class="portfolio__img" src="./img/portfolio-slide1.jpg" alt="portfolio image">
+        <button class="portfolio__btn portfolio__btn-left" type="button"></button>
+        <button class="portfolio__btn portfolio__btn-right" type="button"></button>
+        <div class="portfolio__description">
+          <p class="portfolio__description-text1">Learning site for DL Academy courses</p>
+          <p class="portfolio__description-text2">A simple multi-page static site. The design layout was in Figma. HTML and CSS were used. The site is responsive and cross-browser, but without adding interactivity via JavaScript.</p>
+        </div>
+      </div>
+    </section>
+    @@include('./blocks/footer.html')
     <script src="js/app.js" defer></script>
   </body>
 </html>
