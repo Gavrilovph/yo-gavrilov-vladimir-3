@@ -43,7 +43,7 @@
             </li>
             <li class="profile__list-item">
               <p class="profile__field">Password:</p>
-              <p class="profile__content">••••••••••</p>
+              <p class="profile__content">****************</p>
             </li>
             <li class="profile__list-item">
               <p class="profile__field">Location:</p>
@@ -54,33 +54,19 @@
               <p class="profile__content">33</p>
             </li>
           </ul>
-          <button class="profile__btn" onclick="openModal('changePasswordModal')">Change Password</button>
-          <button class="profile__btn" onclick="openModal('changeDataModal')">Change Other Data</button>
-          <button class="profile__btn" onclick="openModal('deleteAccountModal')">Delete Account</button>
+          <button class="profile__btn profile__btn1">Change Password</button>
+          <button class="profile__btn profile__btn2">Change Other Data</button>
+          <button class="profile__btn profile__btn3">Delete Account</button>
         </div>
       </div>
     </section>
 
 
   <!-- Change Password Modal -->
-    <div class="modal">
-      <form class="modal__content" action="">
-        <div class="modal__wrapper">
-          <label class="modal__label" for="oldPassword">Old password *</label>
-          <input class="modal__input" type="text" id="oldPassword">
-        </div>
-        <div class="modal__wrapper">
-          <label class="modal__label" for="newPassword">New password *</label>
-          <input class="modal__input" type="text" id="newPassword">
-        </div>
-        <div class="modal__wrapper">
-          <label class="modal__label" for="repeatNewPassword">Repeat new password *</label>
-          <input class="modal__input" type="text" id="repeatNewPassword">
-        </div>
-        <button class="modal__btn" type="button">Change password</button>
-      </form>
-    </div>
+  @@include('./blocks/password-modal.html')
 
+    <!-- Change Data Modal -->
+    @@include('./blocks/data-modal.html')
 
   <!-- <div id="changePasswordModal" class="modal">
       <div class="modal-content">
@@ -112,6 +98,7 @@
           <button>Delete</button>
       </div>
   </div> -->
+    <script src="js/password-modal.js"></script>
     <script src="js/app.js" defer></script>
   </body>
 </html>

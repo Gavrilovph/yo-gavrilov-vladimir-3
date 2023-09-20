@@ -31,25 +31,54 @@
 
 @mixin text {
   font-family: "Gilroy";
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: black;
-    margin: 0;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: black;
+  margin: 0;
 }
 
 @mixin btn {
-    background-color: transparent;
-    border: 3px solid #000;
-    border-radius: 30px;
-    color: #000;
-    font-family: Gilroy;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin: 0;
-    padding: 10px 19px 7px;
-    text-decoration: none;
+  background-color: transparent;
+  border: 2px solid #000;
+  border-radius: 30px;
+  color: #000;
+  font-family: Gilroy;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+  padding: 10px 19px 7px;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: #000;
+    border: none;
+    color: #fff;
+    padding: 12px 21px 9px;
+  }
+}
+
+@mixin closeBtn {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-image: url(/img/Close.svg);
+  background-size: cover;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  top: -1px;
+  right: -35px;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-image: url(/img/Close-hover.svg);
+    transition: 0.2s;
+  }
 }
