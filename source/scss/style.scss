@@ -21,8 +21,12 @@
 @import "_blocks/footer";
 @import "_blocks/password-modal";
 @import "_blocks/data-modal";
+@import "_blocks/register-modal";
+@import "_blocks/send-message-modal";
+@import "_blocks/sign-in-modal";
 
-@import "profile.scss";
+@import "profile";
+@import "blog";
 
 /*
   Ниже пример подключения других блоков

@@ -60,44 +60,11 @@
         </div>
       </div>
     </section>
-
-
-  <!-- Change Password Modal -->
-  @@include('./blocks/password-modal.html')
-
+    <!-- Change Password Modal -->
+    @@include('./blocks/password-modal.html')
     <!-- Change Data Modal -->
     @@include('./blocks/data-modal.html')
-
-  <!-- <div id="changePasswordModal" class="modal">
-      <div class="modal-content">
-          <h3>Change Password</h3>
-          <input type="password" placeholder="New Password">
-          <input type="password" placeholder="Confirm Password">
-          <button onclick="closeModal('changePasswordModal')">Save</button>
-      </div>
-  </div> -->
-
-  <!-- Change Data Modal -->
-  <!-- <div id="changeDataModal" class="modal">
-      <div class="modal-content">
-          <h3>Change Other Data</h3>
-          <input type="text" placeholder="Name">
-          <input type="text" placeholder="Surname">
-          <input type="email" placeholder="Email">
-          <input type="text" placeholder="Location">
-          <input type="text" placeholder="Age">
-          <button onclick="closeModal('changeDataModal')">Save</button>
-      </div>
-  </div> -->
-
-  <!-- Delete Account Modal -->
-  <!-- <div id="deleteAccountModal" class="modal">
-      <div class="modal-content">
-          <h3>Are you sure you want to delete your account?</h3>
-          <button onclick="closeModal('deleteAccountModal')">No</button>
-          <button>Delete</button>
-      </div>
-  </div> -->
+    <script src="js/data-modal.js"></script>
     <script src="js/password-modal.js"></script>
     <script src="js/app.js" defer></script>
   </body>

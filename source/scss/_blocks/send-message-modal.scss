@@ -1,8 +1,7 @@
-.dataHidden {
-  display: none;
+.messageHidden {
 }
 
-.modalData{
+.modalMessage {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,18 +15,40 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    max-width: 689px;
+    max-width: 680px;
     width: 100%;
-    height: 504px;
+    height: 540px;
     padding: 40px 40px;
     border: black solid 2px;
-    background-color: #fff;
+    background-color: #ffffff;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style-type: none;
+    max-height: 250px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 290px;
   }
   &__label {
     @include text;
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 6px;
+    //остановился тут(разобраться со звездочками на лейблах)
+    &:nth-child(-n+3) {
+      &::after {
+        content: "*";
+        color: red;
+        font-size: 14px;
+        margin-left: 3px;
+      }
+    }
   }
   &__input {
     @include text;
@@ -45,27 +66,15 @@
       border-color: #070707;
     }
   }
-  &__list {
-    max-height: 260px;
-    list-style-type: none;
+  &__textbox{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    gap: 20px;
     margin-top: 20px;
   }
-  &__item {
-    display: flex;
-    flex-direction: column;
-    max-width: 290px;
-  }
-  &__btn {
-    @include btn;
-    max-width: fit-content;
-    margin-top: 30px;
-  }
-  &__close {
-    @include closeBtn;
-  }
+  &__text {}
+  &__confirmation {}
+  &__checkbox {}
+  &__btn {}
+  &__close {}
 }
 
