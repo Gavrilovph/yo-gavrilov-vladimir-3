@@ -40,6 +40,8 @@
 }
 
 @mixin btn {
+  width: 180px;
+  height: 42px;
   background-color: transparent;
   border: 2px solid #000;
   border-radius: 30px;
@@ -50,17 +52,20 @@
   font-weight: 700;
   line-height: normal;
   margin: 0;
-  padding: 10px 19px 7px;
   text-decoration: none;
   cursor: pointer;
   outline: none;
+  transition: ease-in-out 0.2s;
 
-  &:hover,
-  &:focus {
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
     background-color: #000;
-    border: none;
     color: #fff;
-    padding: 12px 21px 9px;
+  }
+  &:disabled{
+    border: 2px solid #E5E5E5;
+    color: #E5E5E5;
+    cursor: url("../img/cursor_disabled.svg"), auto;
   }
 }
 

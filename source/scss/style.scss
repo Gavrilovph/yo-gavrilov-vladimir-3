@@ -66,12 +66,28 @@
     max-width: 226px;
   }
   &__slider {
-    max-width: 1000px;
     width: 100%;
-  }
-  &__img {
-    max-width: 1000px;
-    max-height: auto;
+    margin: 50px auto;
+    &-wrapper{
+      overflow: hidden;
+    }
+    &-inner{
+      display: flex;
+      height: 100%;
+      transition: transform;
+    }
+    &-slide{
+      height: 465px;
+    }
+    &-img{
+      max-height: 101%;
+    }
+    &-bottomPanel{
+
+    }
+    &-dot:not(.banner__slider-dot_active):hover, .banner__slider-dot:not(.banner__slider-dot_active):focus{
+      background-color: #E5E5E5;
+    }
   }
   &__pagination {
     display: flex;
@@ -85,12 +101,14 @@
       border: none;
       background-color: transparent;
       transition: 0.2s;
-      cursor: pointer;
-      &:hover{
+      &:not(:disabled):hover {
+        cursor: pointer;
         opacity: 50%;
       }
       &:disabled{
         opacity: 10%;
+        cursor: url("../img/cursor_disabled.svg"), auto;
+        user-select: none;
       }
       &-left {
         background-image: url(../img/left-arrow.svg);

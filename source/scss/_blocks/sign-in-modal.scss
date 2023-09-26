@@ -1,0 +1,133 @@
+.signInHidden {
+  display: none;
+}
+.signInModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f6f6f6;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 370px;
+    width: 100%;
+    height: 318px;
+    padding: 40px 40px;
+    border: black solid 2px;
+    background-color: #ffffff;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style-type: none;
+    max-height: 250px;
+    label:nth-child(n) {
+      &::after {
+        content: "*";
+        color: red;
+        font-size: 14px;
+        margin-left: 3px;
+      }
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 290px;
+  }
+  &__label {
+    @include text;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 6px;
+  }
+  &__input {
+    width: 100%;
+    @include text;
+    height: 50px;
+    border: #e5e5e5 solid 2px;
+    padding: 14px 14px;
+    &:focus {
+      border-color: #070707;
+      outline: none;
+    }
+    &:hover {
+      border-color: #828282;
+    }
+    &:active {
+      border-color: #070707;
+    }
+    &-coustom {
+      max-width: 290px;
+      position: relative;
+      display: inline-block;
+      outline: none;
+      & input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 1;
+      }
+    }
+  }
+  &__password {
+    &-js {
+      &:focus + .signInModal__snowflake-output {
+        border-color: #070707;
+        outline: none;
+        &::after {
+          content: "|"; /* Вертикальный курсор */
+          position: absolute;
+          top: 12px;
+          scale: 100%;
+          animation: blink 0.5s infinite alternate;
+        }
+
+        @keyframes blink {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+        &:active {
+          border-color: #070707;
+        }
+      }
+      &:hover + .signInModal__snowflake-output {
+        border-color: #828282;
+      }
+    }
+  }
+  &__snowflake {
+    &-output {
+      position: relative;
+      z-index: 0;
+      background-color: #fff;
+      @include text;
+      height: 50px;
+      border: #e5e5e5 solid 2px;
+      padding: 14px 14px;
+    }
+  }
+  &__btn {
+    @include btn;
+    max-width: fit-content;
+    margin-top: 30px;
+    padding: 10px 19px;
+  }
+  &__close {
+    @include closeBtn;
+  }
+}

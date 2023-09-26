@@ -15,18 +15,15 @@
     max-width: 269px;
   }
   &__btn {
+    @include btn;
     background-color: #070707;
-    padding: 10px 29px;
-    border: none;
-    border-radius: 30px;
-    @include text;
-    font-weight: 700;
     color: #FFFFFF;
-    &:hover{
+    &:not(:disabled):hover,
+    &:not(:disabled):focus {
       color: black;
       background-color: transparent;
-      border: black solid 3px;
-      padding: 7px 26px;
+      // border: black solid 3px;
+      // padding: 7px 26px;
     }
   }
   &__socials {
@@ -37,23 +34,9 @@
     max-width: 335px;
     margin: 40px 0;
     &-link{
-      @include text;
-      font-weight: 700;
-      color: #000000;
-      background-color: transparent;
-      padding: 10px 19px 7px;
-      border-radius: 30px;
-      border: black solid 3px;
-      text-decoration: none;
-      &:hover{
-        color: #FFFFFF;
-        background-color: #000000;
-        padding: 13px 22px 10px;
-        border: none;
-      }
-      &:disabled{
-        opacity: 10%;
-      }
+      @include btn;
+      max-width: fit-content;
+      padding: 10px 19px;
     }
     &-link1 {}
     &-link2 {}

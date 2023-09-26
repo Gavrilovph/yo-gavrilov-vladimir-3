@@ -30,7 +30,28 @@
           33 years old, Tolyatti</p>
       </div>
       <div class="banner__slider">
-        <img class="banner__img" src="./img/main-photo.jpg" alt="picture of the portfolio's owner" >
+        <div class="banner__slider-wrapper">
+          <div class="banner__slider-inner">
+            <div class="banner__slider-slide">
+              <img class="banner__slider-img" src="./img/main-photo.jpg" alt="picture of the portfolio's owner">
+            </div>
+            <div class="banner__slider-slide">
+              <img class="banner__slider-img" src="./img/slide-2.jpg" alt="picture of the portfolio's owner">
+            </div>
+            <div class="banner__slider-slide">
+              <img class="banner__slider-img" src="./img/slide-3.jpg" alt="picture of the portfolio's owner">
+            </div>
+            <div class="banner__slider-slide">
+              <img class="banner__slider-img" src="./img/slide-4.jpg" alt="picture of the portfolio's owner">
+            </div>
+          </div>
+        </div>
+        <div class="banner__slider-bottomPanel banner__pagination">
+          <button class="banner__pagination-btn banner__pagination-btn-left banner__pagination-btn-back_js"></button>
+          <div class="banner__slider-pagination banner__slider-pagination_js "></div>
+          <button class="banner__pagination-btn banner__pagination-btn-right banner__pagination-btn-next_js"></button>
+        </div>
+        <!-- <img class="banner__img" src="./img/main-photo.jpg" alt="picture of the portfolio's owner" >
         <div class="banner__pagination">
           <button class="banner__pagination-btn banner__pagination-btn-left"></button>
           <ul class="banner__pagination-list">
@@ -40,7 +61,7 @@
             <li class="banner__pagination-list-item"></li>
           </ul>
           <button class="banner__pagination-btn banner__pagination-btn-right"></button>
-        </div>
+        </div> -->
       </div>
     </main>
     <section class="about">
@@ -132,10 +153,18 @@
         </div>
       </div>
     </section>
+    <!-- Sign In Modal -->
+    @@include('./blocks/sign-in-modal.html')
+    <!-- Register Modal -->
+    @@include('./blocks/register-modal.html')
     <!-- Message Modal -->
     @@include('./blocks/send-message-modal.html')
     <!-- Footer -->
     @@include('./blocks/footer.html')
+    <script src="js/slider.js"></script>
+    <script src="js/sign-in-modal.js"></script>
+    <script src="js/register-modal.js"></script>
+    <script src="js/send-message-modal.js"></script>
     <script src="js/app.js" defer></script>
   </body>
 </html>

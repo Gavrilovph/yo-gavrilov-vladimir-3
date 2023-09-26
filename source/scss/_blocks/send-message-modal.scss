@@ -1,4 +1,5 @@
 .messageHidden {
+  display: none;
 }
 
 .modalMessage {
@@ -11,6 +12,7 @@
   right: 0;
   bottom: 0;
   background-color: #f6f6f6;
+
   &__form {
     display: flex;
     flex-direction: column;
@@ -29,6 +31,14 @@
     gap: 20px;
     list-style-type: none;
     max-height: 250px;
+    label:nth-child(n) {
+      &::after {
+        content: "*";
+        color: red;
+        font-size: 14px;
+        margin-left: 3px;
+      }
+    }
   }
   &__item {
     display: flex;
@@ -40,17 +50,29 @@
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 6px;
-    //остановился тут(разобраться со звездочками на лейблах)
-    &:nth-child(-n+3) {
-      &::after {
-        content: "*";
-        color: red;
-        font-size: 14px;
-        margin-left: 3px;
+    &-custom {
+      position: relative;
+      padding-left: 30px;
+      cursor: pointer;
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 19px;
+        height: 19px;
+        background-image: url('../img/input_unchecked.svg');
+        position: absolute;
+        left: 0;
+        top: -2px;
+      }
+      #Confirmation:checked + &::before {
+        background-image: url("../img/input_checked.svg");
+        background-repeat: no-repeat;
+        background-position: cover;
       }
     }
   }
-  &__input {
+  &__input,
+  &__text {
     @include text;
     height: 50px;
     border: #e5e5e5 solid 2px;
@@ -66,15 +88,42 @@
       border-color: #070707;
     }
   }
-  &__textbox{
+  &__textbox {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
   }
-  &__text {}
-  &__confirmation {}
-  &__checkbox {}
-  &__btn {}
-  &__close {}
+  &__text {
+    height: 150px;
+    resize: none;
+  }
+  &__confirmation {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    label:nth-child(n) {
+      margin: 0;
+    }
+  }
+  &__checkbox {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    border: black solid 4px;
+    z-index: 1;
+    opacity: 0;
+    &:disabled ~ .modalMessage__label-custom {
+      opacity: 20%;
+    }
+  }
+  &__btn {
+    @include btn;
+    max-width: fit-content;
+    margin-top: 20px;
+    padding: 10px 19px;
+  }
+  &__close {
+    @include closeBtn;
+  }
 }
-
