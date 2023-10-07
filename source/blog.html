@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>Portfolio</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <script>
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+    </script>
+
+    <!-- build:css -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <!-- endbuild -->
+  </head>
+  <body>
+    @@include('./blocks/header.html',{
+      'signInHiddenClass':"header__signIn-hidden",
+      'registerHiddenClass':"header__register-hidden",
+    })
+    <section class="blog container">
+      <h1 class="blog__title">My blog</h1>
+      <form name="filter" class="blog__form form_js" id="filter">
+        <div class="blog__form-wrapper">
+          <p class="blog__form-subtitle">Tags</p>
+          @@include('./blocks/checkbox.html')
+        </div>
+
+        <div class="blog__form-wrapper">
+          <p class="blog__form-subtitle">Views</p>
+          <ul class="blog__form-list">
+            <li class="blog__form-list-item">
+              <input type="radio" class="blog__form-radio" id="100-500" name="views">
+              <label for="100-500" class="blog__form-label blog__form-label-customRadio">100-500</label>
+            </li>
+            <li class="blog__form-list-item">
+              <input type="radio" class="blog__form-radio" id="500-1000" name="views">
+              <label for="500-1000" class="blog__form-label blog__form-label-customRadio">500-1000</label>
+            </li>
+            <li class="blog__form-list-item">
+              <input type="radio" class="blog__form-radio" id="1000-2000" name="views">
+              <label for="1000-2000" class="blog__form-label blog__form-label-customRadio">1000-2000</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="blog__form-wrapper">
+          <p class="blog__form-subtitle">Comments</p>
+          <ul class="blog__form-list">
+            <li class="blog__form-list-item">
+              <input type="checkbox" class="blog__form-chekbox" id="0">
+              <label for="0" class="blog__form-label blog__form-label-customCheckbox">0</label>
+            </li>
+            <li class="blog__form-list-item">
+              <input type="checkbox" class="blog__form-chekbox" id="0-1">
+              <label for="0-1" class="blog__form-label blog__form-label-customCheckbox">0-1</label>
+            </li>
+            <li class="blog__form-list-item">
+              <input type="checkbox" class="blog__form-chekbox" id="1-50">
+              <label for="1-50" class="blog__form-label blog__form-label-customCheckbox">1-50</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="blog__form-wrapper">
+          <p class="blog__form-subtitle">How show?</p>
+          <ul class="blog__form-list">
+            <li class="blog__form-list-item">
+              <input type="radio" class="blog__form-radio" id="show5" value="5" name="limit" checked>
+              <label for="show5" class="blog__form-label blog__form-label-customRadio">show 5</label>
+            </li>
+            <li class="blog__form-list-item">
+              <input type="radio" class="blog__form-radio" id="show10" value="10" name="limit">
+              <label for="show10" class="blog__form-label blog__form-label-customRadio">show 10</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="blog__form-wrapper">
+          <p class="blog__form-subtitle">Sort by</p>
+          <ul class="blog__form-list">
+            <li class="blog__form-list-item">
+              <input name="sortBy" type="radio" class="blog__form-radio" id="sortDate" value="date">
+              <label for="sortDate" class="blog__form-label blog__form-label-customRadio">date</label>
+            </li>
+            <li class="blog__form-list-item">
+              <input name="sortBy" type="radio" class="blog__form-radio" id="sortTitle" value="title">
+              <label for="sortTitle" class="blog__form-label blog__form-label-customRadio">title</label>
+            </li>
+            <li class="blog__form-list-item">
+              <input name="sortBy" type="radio" class="blog__form-radio" id="sortViews" value="views">
+              <label for="sortViews" class="blog__form-label blog__form-label-customRadio">views</label>
+            </li>
+          </ul>
+        </div>
+        <button class="blog__form-btn" type="reset">Reset</button>
+        <div class="blog__search">
+          <input name="name" type="text" class="blog__search-input form-control" id="exampleFromControlInput3">
+          <button class="blog__search-btn" type="submit">Search</button>
+        </div>
+      </form>
+
+      <section class="blog__content result_js">
+        <h2 class="blog__content-title"></h2>
+      </section>
+      <div class="blog__pagination pagination_js">
+        <button class="blog__pagination-btn blog__pagination-btn-left blog__pagination-btn-back_js"></button>
+          <div class="blog__pagination-numbers blog__pagination-numbers_js "></div>
+          <button class="blog__pagination-btn blog__pagination-btn-right blog__pagination-btn-next_js"></button>
+      </div>
+    </section>
+    <!-- Loader -->
+    @@include('./blocks/loader.html')
+    <!--  -->
+    <!-- Message Modal -->
+    @@include('./blocks/send-message-modal.html')
+    <!-- Footer -->
+    @@include('./blocks/footer.html')
+    <script src="js/blog.js"></script>
+    <script src="js/checkbox.js"></script>
+    <script src="js/send-message-modal.js"></script>
+    <script src="js/app.js" defer></script>
+  </body>
+</html>

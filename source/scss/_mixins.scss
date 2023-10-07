@@ -50,7 +50,6 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
   margin: 0;
   text-decoration: none;
   cursor: pointer;
@@ -62,9 +61,9 @@
     background-color: #000;
     color: #fff;
   }
-  &:disabled{
-    border: 2px solid #E5E5E5;
-    color: #E5E5E5;
+  &:disabled {
+    border: 2px solid #e5e5e5;
+    color: #e5e5e5;
     cursor: url("../img/cursor_disabled.svg"), auto;
   }
 }
@@ -85,5 +84,33 @@
   &:focus {
     background-image: url(/img/Close-hover.svg);
     transition: 0.2s;
+  }
+}
+
+@mixin inputText {
+  @include text;
+  height: 50px;
+  border: #e5e5e5 solid 2px;
+  padding: 14px 14px;
+  &:focus {
+    border-color: #070707;
+    outline: none;
+  }
+  &:hover {
+    border-color: #828282;
+  }
+  &:active {
+    border-color: #070707;
+  }
+}
+
+@mixin articlesLink {
+  @include text;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px dashed #000000;
+  width: fit-content;
+  &:hover{
+    border-bottom: 1px solid #000000;
   }
 }

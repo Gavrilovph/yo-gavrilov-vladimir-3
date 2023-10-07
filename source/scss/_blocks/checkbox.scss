@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
+/* Ниже приведен источник откуда бралась информация для данного примера. */
+/* source https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
+
+.tags{
+  &-wrapper {
+    width: 115px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+}
+
+
+.checkbox {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  width: 25px;
+  height: 25px;
+  &__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  &__mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 6px;
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+  }
+  &__input:checked ~ .checkbox__mark:after {
+    display: block;
+  }
+
+}
+
+.checkbox .checkbox__mark:after {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 13px;
+  height: 25px;
+  left: -4px;
+  top: -4px;
+  width: 25px;
+
+  mask-image: url(../img/input_checked1.svg);
+  mask-repeat: no-repeat;
+  mask-position: 50%;
+}
+
+.select-of-box_js {
+  position: relative;
+  width: 115px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}

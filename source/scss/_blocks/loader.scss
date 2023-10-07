@@ -1,0 +1,22 @@
+.full{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.1);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+}
+
+.spinner-border {
+  position: absolute;
+  background-image: url(../img/loader.gif);
+  width: 70px;
+  height: 70px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.hidden {
+  display: none;
+}

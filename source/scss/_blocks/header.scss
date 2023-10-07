@@ -1,10 +1,19 @@
 .header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-wrap: wrap;
   height: 88px;
-  border-bottom: 1px solid black;
 
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  &__line{
+    border-bottom: 1px solid black;
+    width: 100%;
+  }
   &__home {
     @include text;
     font-weight: 700;
@@ -58,4 +67,11 @@
       transition: 0.2s;
     }
   }
+}
+
+// Hidding Sign in and Register links on the My profile .profile__image
+.header__signIn-hidden,
+.header__register-hidden{
+  display: none;
+  position: absolute;
 }

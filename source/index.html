@@ -52,23 +52,26 @@
         </div>
         <div class="banner__slider-bottomPanel banner__pagination">
           <button class="banner__pagination-btn banner__pagination-btn-left banner__pagination-btn-back_js"></button>
-          <div class="banner__slider-pagination banner__slider-pagination_js "></div>
+          <div class="banner__slider-pagination banner__slider-pagination_js"></div>
           <button class="banner__pagination-btn banner__pagination-btn-right banner__pagination-btn-next_js"></button>
         </div>
       </div>
     </main>
     <section class="about">
       <h2 class="about__title">About me</h2>
-      <div class="about__wrapper container">
+      <div class="about__wrapper">
         <div class="about__articles">
-          <div class="about__articles-one"> <!--Divs for bg image-->
-            <p class="about__articles-text">Aliquam tortor molestie turpis est tristique. Congue diam orci amet quis semper ut. Vitae aenean nibh facilisis urna, ultricies euismod nunc. Commodo fringilla sit hendrerit consequat. Vel ac elit vel sagittis.</p>
+          <div class="about__articles-frame about__articles-frame-one"> <!--Divs for bg image-->
+            <p class="about__articles-text about__articles-content_js">Aliquam tortor molestie turpis est tristique. Congue diam orci amet quis semper ut. Vitae aenean nibh facilisis urna, ultricies euismod nunc. Commodo fringilla sit hendrerit consequat. Vel ac elit vel sagittis.</p>
+            <div class="about__articles-corner"></div>
           </div>
-          <div class="about__articles-two">
-            <p class="about__articles-text">Tincidunt id quis pellentesque rutrum pretium. Egestas aliquam dictum ipsum nisl, sed pulvinar. Commodo elit sed a fermentum non justo. Etiam platea consectetur.</p>
+          <div class="about__articles-frame about__articles-frame-two">
+            <p class="about__articles-text about__articles-content_js">Tincidunt id quis pellentesque rutrum pretium. Egestas aliquam dictum ipsum nisl, sed pulvinar. Commodo elit sed a fermentum non justo. Etiam platea consectetur.</p>
+            <div class="about__articles-corner about__articles-corner-middle"></div>
           </div>
-          <div class="about__articles-three">
-            <p class="about__articles-text">Quam ipsum odio tellus etiam aliquam dolor ut hendrerit. Felis risus nec vitae nunc ultricies placerat. Nullam nec felis eu id dolor pellentesque tristique. </p>
+          <div class="about__articles-frame about__articles-frame-three">
+            <p class="about__articles-text about__articles-content_js">Quam ipsum odio tellus etiam aliquam dolor ut hendrerit. Felis risus nec vitae nunc ultricies placerat. Nullam nec felis eu id dolor pellentesque tristique. </p>
+            <div class="about__articles-corner"></div>
           </div>
         </div>
       </div>
@@ -76,7 +79,7 @@
     <section class="skills container">
       <h2 class="skills__title">Skills</h2>
       <p class="skills__text">I work in such programs as</p>
-      <div class="skills__wrapper">
+      <div class="skills__wrapper container">
         <div class="skills__box">
           <img class="skills__img1" src="./img/html-icon.svg" alt="skills icon">
           <p class="skills__box-text">HTML 5</p>
@@ -136,22 +139,27 @@
     </section>
 
     <section class="portfolio">
-      <h2 class="portfolio__title">Portfolio</h2>
-      <!-- Slider main container -->
-      <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide"><img class="portfolio__img" src="./img/portfolio-slide1.jpg" alt="portfolio image"></div>
-          <div class="swiper-slide"><img class="portfolio__img" src="./img/portfolio-slide1.jpg" alt="portfolio image"></div>
-          <div class="swiper-slide"><img class="portfolio__img" src="./img/portfolio-slide1.jpg" alt="portfolio image"></div>
-        </div>
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="portfolio__description">
-          <p class="portfolio__description-text1">Learning site for DL Academy courses</p>
-          <p class="portfolio__description-text2">A simple multi-page static site. The design layout was in Figma. HTML and CSS were used. The site is responsive and cross-browser, but without adding interactivity via JavaScript.</p>
+      <div class="portfolio__wrapper container">
+        <h2 class="portfolio__title">Portfolio</h2>
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img class="portfolio__img" src="./img/portfolio-slide1.jpg" alt="portfolio image"></div>
+            <div class="swiper-slide"><img class="portfolio__img" src="./img/portfolio-slide11.jpg" alt="portfolio image"></div>
+            <div class="swiper-slide"><img class="portfolio__img" src="./img/portfolio-slide2.jpg" alt="portfolio image"></div>
+            <div class="swiper-slide"><img class="portfolio__img" src="./img/portfolio-slide3.jpg" alt="portfolio image"></div>
+            <div class="swiper-slide"><img class="portfolio__img" src="./img/portfolio-slide4.jpg" alt="portfolio image"></div>
+            <div class="swiper-slide"><img class="portfolio__img" src="./img/portfolio-slide5.jpg" alt="portfolio image"></div>
+          </div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="portfolio__description">
+            <p class="portfolio__description-text1">Learning site for DL Academy courses</p>
+            <p class="portfolio__description-text2">A simple multi-page static site. The design layout was in Figma. HTML and CSS were used. The site is responsive and cross-browser, but without adding interactivity via JavaScript.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -164,6 +172,7 @@
     <!-- Footer -->
     @@include('./blocks/footer.html')
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/about-me.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/sign-in-modal.js"></script>

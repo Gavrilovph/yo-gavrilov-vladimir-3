@@ -1,15 +1,21 @@
 <header class="header container">
-  <a class="header__home" href="/">Home</a>
-  <ul class="header__list">
-    <li class="header__list-item">
-      <a href="#" class="header__link">My blog</a>
-    </li>
-    <li class="header__list-item">
-      <button class="header__btn header__signIn-js" type="button">Sign in</button>
-    </li>
-    <li class="header__list-item">
-      <button class="header__btn header__register-js" type="button">Register</button>
-    </li>
-  </ul>
+  <div class="header__wrapper">
+    <a class="header__home" href="/">Home</a>
+    <ul class="header__list">
+      <li class="header__list-item">
+        <a href="./blog.html" class="header__link">My blog</a>
+      </li>
+      <li class="header__list-item">
+        <a href="./profile.html" class="header__link">My profile</a>
+      </li>
+      <li class="header__list-item @@signInHiddenClass">
+        <button class="header__btn header__signIn-js" type="button">Sign in</button>
+      </li>
+      <li class="header__list-item @@registerHiddenClass">
+        <button class="header__btn header__register-js" type="button">Register</button>
+      </li>
+    </ul>
+  </div>
+  <div class="header__line"></div>
 </header>
 

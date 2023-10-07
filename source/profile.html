@@ -22,7 +22,10 @@
     <!-- endbuild -->
   </head>
   <body>
-    @@include('./blocks/header.html')
+    @@include('./blocks/header.html',{
+      'signInHiddenClass':"header__signIn-hidden",
+      'registerHiddenClass':"header__register-hidden",
+    })
     <section class="profile container">
       <h1 class="profile__title">My profile</h1>
       <div class="profile__info">
